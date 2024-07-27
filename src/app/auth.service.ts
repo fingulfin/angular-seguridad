@@ -21,6 +21,11 @@ private token=''
       this.request=request
       this.token=request.token;
       console.log("hayyy yaaaaa:"+this.request.token)
+//Guardamos el token
+localStorage.setItem('token',this.token)
+
+//localStorage.getItem('token')
+
     })
   
  
@@ -28,6 +33,8 @@ private token=''
 //Reseteamos el token para salir jijijiji
   logout() {
     this.token = '';
+    localStorage.removeItem('token')
+
     }
 
     get isLoggedIn() { return this.token !== ''; }   
