@@ -12,11 +12,14 @@ private request:any
 private token=''
   constructor(private http:HttpClient) { }
 
-  login(){
-    
+  login(username:string, password:string){
+
+    console.log('Este es el email'+username)
+    console.log('Este es el pssword '+password)
+   
     this.http.post<any>('http://localhost:8080/rest/auth/login',{
-      email:'yo@gmail.com',
-      password:'123456'
+      email:username,
+      password:password
     }).subscribe(request=>{
       this.request=request
       this.token=request.token;

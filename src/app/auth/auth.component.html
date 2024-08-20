@@ -1,8 +1,10 @@
 <p>auth works!</p>
+<input  [(ngModel)]="username" >
+<input  [(ngModel)]="password" >  
 
 <button
 [hidden]="authService.isLoggedIn"
-(click)="authService.login()"
+(click)="authService.login(username, password)"
 >Login</button>
 <button
 [hidden]="!authService.isLoggedIn"
