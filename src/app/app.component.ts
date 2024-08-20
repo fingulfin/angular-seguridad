@@ -4,13 +4,15 @@ import { RouterOutlet } from '@angular/router';
 import {AuthComponent} from '../app/auth/auth.component'
 import {ListaLibrosComponent} from '../app/lista-libros/lista-libros.component'
 import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { SignupComponent } from "./signup/signup.component";
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AuthComponent,ListaLibrosComponent, HttpClientModule],
+  imports: [CommonModule,
+     RouterOutlet, AuthComponent, ListaLibrosComponent, HttpClientModule, SignupComponent],
  
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
