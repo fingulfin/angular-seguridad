@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import {AuthComponent} from '../app/auth/auth.component'
 import {ListaLibrosComponent} from '../app/lista-libros/lista-libros.component'
 import {HttpClient, HttpClientModule} from '@angular/common/http'
@@ -12,7 +12,7 @@ import { SignupComponent } from "./signup/signup.component";
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
-     RouterOutlet, AuthComponent, ListaLibrosComponent, HttpClientModule, SignupComponent],
+     RouterOutlet, RouterLink, RouterLinkActive, AuthComponent, ListaLibrosComponent, HttpClientModule, SignupComponent],
  
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
